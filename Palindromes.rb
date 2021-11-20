@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+def is_palindrome(word)
+  reversed = ''
+  i = 0
+  while i < word.length
+    char = word[i]
+    reversed = char + reversed
+    i += 1
+  end
+  reversed == word
+end
+
+puts is_palindrome('racecar')  # => true
+puts is_palindrome('kayak')    # => true
+puts is_palindrome('bootcamp') # => false
+puts is_palindrome('anavolimilovana') # => true
